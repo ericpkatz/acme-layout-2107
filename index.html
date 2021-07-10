@@ -1,6 +1,10 @@
 <html>
   <head>
+      <meta name="viewport" content="width=device-width">
 <style>
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: sans-serif;
@@ -31,6 +35,53 @@ nav a.selected {
   border: solid 1px cornSilk;
 }
 
+main {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+main div {
+  margin: 1rem;
+  border: solid 1px black;
+}
+
+.sm {
+  width: 3rem;
+  height: 3rem;
+}
+
+.md {
+  width: 6rem;
+  height: 6rem;
+}
+
+.lg {
+  width: 9rem;
+  height: 9rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+@media (max-width: 500px){
+  nav {
+    flex-direction: column;
+  }
+}
+
 </style>
   </head>
   <body>
@@ -40,5 +91,23 @@ nav a.selected {
       <a href='#' class='selected'>Products</a>
       <a href='#'>Contact</a>
     </nav>
+    <main>
+      <div class='red sm'></div>
+      <div class='blue md'></div>
+      <div class='blue lg'></div>
+      <div class='red sm'></div>
+      <div class='green lg'></div>
+      <div class='red md'></div>
+      <div class='red sm'></div>
+      <div class='green md'></div>
+      <div class='blue md'></div>
+      <div class='blue lg'></div>
+      <div class='red sm'></div>
+      <div class='green lg'></div>
+      <div class='red md'></div>
+      <div class='green md'></div>
+      <div class='blue md'></div>
+      <div class='blue lg'></div>
+    </main>
   </body>
 </html>
